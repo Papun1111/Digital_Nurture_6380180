@@ -1,4 +1,3 @@
-Here's a well-structured `README.md` for your repository:
 
 ---
 
@@ -42,5 +41,3 @@ This repo serves as:
 Feel free to clone, fork, or contribute if you're on the same learning path. Happy coding! 💻✨
 
 ---
-
-Let me know if you want this converted into a stylised Markdown version with emojis or links.
