@@ -1,5 +1,3 @@
-Here is the cleaned-up `README.md` version with all emojis, signs, and comments removed, and the analysis rewritten as a paragraph:
-
 ---
 
 ## Inventory Management System – Java
