@@ -3,30 +3,7 @@ public class Main {
     private static Employee[] employees = new Employee[MAX_EMPLOYEES];
     private static int count = 0;
 
-    public static void main(String[] args) {
-
-        // ✅ 1. Add Example
-        System.out.println("Adding employee...");
-        addEmployee(101, "John Doe", "Developer", 70000);
-
-        // ✅ 2. Search Example
-        System.out.println("\nSearching for employee with ID 101...");
-        searchEmployee(101);
-
-        // ✅ 3. Traverse Example
-        System.out.println("\nTraversing all employees...");
-        traverseEmployees();
-
-        // ✅ 4. Delete Example
-        System.out.println("\nDeleting employee with ID 101...");
-        deleteEmployee(101);
-
-        // ✅ Traverse again to show it's deleted
-        System.out.println("\nTraversing all employees after deletion...");
-        traverseEmployees();
-    }
-
-    private static void addEmployee(int id, String name, String position, double salary) {
+private static void addEmployee(int id, String name, String position, double salary) {
         if (count >= MAX_EMPLOYEES) {
             System.out.println("Employee list is full.");
             return;
@@ -75,4 +52,27 @@ public class Main {
                 + ", Position: " + emp.getPosition()
                 + ", Salary: " + emp.getSalary());
     }
+        public static void main(String[] args) {
+
+      
+        System.out.println("Adding employee...");
+        addEmployee(101, "John Doe", "Developer", 70000);
+
+     
+        System.out.println("\nSearching for employee with ID 101...");
+        searchEmployee(101);
+
+      
+        System.out.println("\nTraversing all employees...");
+        traverseEmployees();
+
+        System.out.println("\nDeleting employee with ID 101...");
+        deleteEmployee(101);
+
+  
+        System.out.println("\nTraversing all employees after deletion...");
+        traverseEmployees();
+    }
+
+    
 }
