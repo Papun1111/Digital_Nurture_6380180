@@ -1,0 +1,6 @@
+16:54:17.234 [main] ERROR com.example.LoggingExample - This is an error message
+16:54:17.235 [main] WARN  com.example.LoggingExample - This is a warning message
+16:54:17.236 [main] INFO  com.example.LoggingExample - User john_doe has attempted to log in 3 times
+16:55:41.529 [main] ERROR com.example.LoggingExample - This is an error message
+16:55:41.531 [main] WARN  com.example.LoggingExample - This is a warning message
+16:55:41.532 [main] INFO  com.example.LoggingExample - User Papun Mohapatra has attempted to log in 3 times
