@@ -1,4 +1,3 @@
-Sure! Here's the updated `README.md` **excluding the expected output section**:
 
 ---
 
