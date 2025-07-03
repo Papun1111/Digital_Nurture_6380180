@@ -1,86 +1,118 @@
-# Library Management Spring Framework Exercises
+Sure! Here's the updated `README.md` **excluding the expected output section**:
 
-This repository provides complete solutions for three foundational exercises to learn and apply core features of the Spring Framework, including dependency injection and Aspect‑Oriented Programming (AOP). Each exercise includes configuration files, source code, and example outputs.
+---
 
-## Contents
+# Library Management – Spring Framework Exercises
 
-* **Exercise 1: Configuring a Basic Spring Application**
+This repository provides complete solutions for foundational exercises designed to help you learn and apply the core features of the **Spring Framework**, including **Dependency Injection (DI)** and **Aspect-Oriented Programming (AOP)**. Each exercise includes relevant configuration files, source code, and structure.
 
-  * Maven project setup with Spring Core dependencies
-  * `applicationContext.xml` defining `BookService` and `BookRepository` beans
-  * Plain Java classes in packages:
+---
 
-    * `com.library.service.BookService`
-    * `com.library.repository.BookRepository`
-  * Main application class to load the Spring context and invoke service methods, demonstrating basic bean retrieval.
+## 📁 Contents
 
-* **Exercise 2: Implementing Dependency Injection**
+### **Exercise 1: Configuring a Basic Spring Application**
 
-  * Enhanced `applicationContext.xml` wiring `BookRepository` into `BookService` via setter injection
-  * Updated `BookService` class with a public setter for `BookRepository`
-  * Main class execution verifying that `BookService` methods operate correctly with the injected repository.
+* Maven project setup with Spring Core dependencies
+* `applicationContext.xml` defining `BookService` and `BookRepository` beans
+* Java classes:
 
-* **Exercise 3: Implementing Logging with Spring AOP**
+  * `com.library.service.BookService`
+  * `com.library.repository.BookRepository`
+* Main class to load Spring context and demonstrate basic bean usage
 
-  * Added `spring-aop` dependency in `pom.xml`
-  * Created `com.library.aspect.LoggingAspect` annotated with `@Aspect` to log method execution times
-  * Enabled AspectJ support with `<aop:aspectj-autoproxy/>` in `applicationContext.xml`
-  * Main application class demonstrating console log messages showing execution durations for service methods.
+---
 
-## Prerequisites
+### **Exercise 2: Implementing Dependency Injection**
+
+* `BookRepository` is injected into `BookService` using setter injection
+* Verified through service method calls in the main class
+* Spring container manages bean dependencies declared in `applicationContext.xml`
+
+---
+
+### **Exercise 3: Logging with Spring AOP**
+
+* Added `spring-aop` dependency in `pom.xml`
+* Defined `LoggingAspect` class in `com.library.aspect` using `@Aspect`
+* Logging execution time for methods using `@Around` advice
+* Enabled AOP with `<aop:aspectj-autoproxy/>` in `applicationContext.xml`
+
+---
+
+### ✅ Exercises 4, 5, 7, and 8:
+
+These exercises **share the same setup and configuration** as Exercises 1–3.
+
+* Refer to `src/main/java` and `src/main/resources` for all relevant files.
+* These serve as practice variations of the core concepts.
+
+---
+
+### 🚀 Exercise 6 & Exercise 9 – **Standalone Maven Projects**
+
+* Exercises 6 and 9 are implemented as **separate Maven projects**
+* Navigate to:
+
+  * `exercise-6/` for Exercise 6
+  * `exercise-9/` for Exercise 9
+* Each project has its own `pom.xml`, source code, and Spring configuration for isolated execution.
+
+---
+
+## 🛠 Prerequisites
 
 * Java Development Kit (JDK) 17 or later
 * Apache Maven 3.6+
 
-## How to Run
+---
 
-1. **Clone the repository**
+## 🚦 How to Run
 
-   ```bash
-   git clone <repository_url>
-   cd LibraryManagement
-   ```
+### Clone the Repository
 
-2. **Build the project**
-
-   ```bash
-   mvn clean compile
-   ```
-
-3. **Execute the application**
-
-   ```bash
-   mvn exec:java -Dexec.mainClass="com.librarymanagement.App"
-   ```
-
-   * This will load the Spring context, invoke `BookService` and `BookRepository` methods, and display sample outputs.
-   * In Exercise 3, you will also see AOP log statements such as:
-
-     ```text
-     execution(* com.librarymanagement.service.*.*(..)) executed in 12ms
-     ```
-
-## Expected Output
-
-Running the main application should produce output similar to:
-
-```text
-[BookService] demoBookService invoked
-[BookRepository] demoRepo invoked
-Dependency injection verified: bookRepository is not null
-[LoggingAspect] com.librarymanagement.service.BookService.demobookservice executed in 15ms
-[LoggingAspect] com.librarymanagement.repository.BookRepository.demoRepo executed in 5ms
+```bash
+git clone <repository_url>
+cd LibraryManagement
 ```
 
-## Exercises 4-8: Common Configuration and Output
+### Build the Project
 
-Exercises 4, 5, 7, and 8 share the same solution configuration and expected outputs as described in Exercises 1–3. Therefore, their detailed solutions are not repeated here. You can find all necessary configuration files and outputs in the `src/main/java` and `src/main/resources` directories, following the patterns established in earlier exercises.
+```bash
+mvn clean compile
+```
 
-## Notes
+### Run the Main Application
 
-* All source files are located under `src/main/java` following standard Maven conventions.
-* Configuration files are in `src/main/resources`.
-* You can modify bean IDs, package names, or aspect pointcuts by updating `applicationContext.xml` and your aspect class as needed.
+```bash
+mvn exec:java -Dexec.mainClass="com.librarymanagement.App"
+```
+
+### For Exercise 6 and 9:
+
+```bash
+cd exercise-6
+mvn clean compile
+mvn exec:java -Dexec.mainClass="com.exercise6.MainApp"
+
+cd ../exercise-9
+mvn clean compile
+mvn exec:java -Dexec.mainClass="com.exercise9.MainApp"
+```
+
+---
+
+## 📂 Project Structure
+
+* `src/main/java`: Source code and packages for service, repository, and aspects
+* `src/main/resources`: Contains `applicationContext.xml`
+* `pom.xml`: Maven project configuration
+
+---
+
+## 📝 Notes
+
+* You can customise bean IDs, package names, or aspect pointcuts in `applicationContext.xml` as needed.
+* Each exercise is modular, focusing on a specific Spring concept.
 
 ---
 
