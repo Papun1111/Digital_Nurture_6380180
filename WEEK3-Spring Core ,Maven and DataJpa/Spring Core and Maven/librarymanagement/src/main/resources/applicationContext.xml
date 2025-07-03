@@ -17,6 +17,7 @@
   <bean id="bookService"
         class="com.librarymanagement.service.BookService">
     <property name="bookRepository" ref="bookRepository"/>
+      <constructor-arg name="bookRepository" ref="bookRepository"/>
   </bean>
   
   <!-- Logging aspect -->

@@ -72,6 +72,10 @@ Dependency injection verified: bookRepository is not null
 [LoggingAspect] com.librarymanagement.repository.BookRepository.demoRepo executed in 5ms
 ```
 
+## Exercises 4-8: Common Configuration and Output
+
+Exercises 4, 5, 7, and 8 share the same solution configuration and expected outputs as described in Exercises 1–3. Therefore, their detailed solutions are not repeated here. You can find all necessary configuration files and outputs in the `src/main/java` and `src/main/resources` directories, following the patterns established in earlier exercises.
+
 ## Notes
 
 * All source files are located under `src/main/java` following standard Maven conventions.
@@ -79,3 +83,4 @@ Dependency injection verified: bookRepository is not null
 * You can modify bean IDs, package names, or aspect pointcuts by updating `applicationContext.xml` and your aspect class as needed.
 
 ---
+
