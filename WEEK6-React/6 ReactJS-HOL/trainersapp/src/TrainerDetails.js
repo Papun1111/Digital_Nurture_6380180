@@ -17,7 +17,7 @@ const TrainerDetail = () => {
       <p><strong>Name:</strong> {trainer.name}</p>
       <p><strong>Email:</strong> {trainer.email}</p>
       <p><strong>Phone:</strong> {trainer.phone}</p>
-      <p><strong>Specialization:</strong> {trainer.specialization}</p>
+      <p><strong>Specialization:</strong> {trainer.technology}</p>
       <p><strong>Skills:</strong> {trainer.skills.join(', ')}</p>
     </div>
   );
